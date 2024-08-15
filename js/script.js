@@ -1,38 +1,25 @@
-var keyword = document.getElementById('keyword');
-var container = document.getElementById('container');
-var tombolCari = document.getElementById('tombol-cari');
+document.addEventListener("DOMContentLoaded", function () {
+  var keywordInput = document.getElementById("keyword");
+  var container = document.getElementById("container");
+  var paginationLinks = document.getElementById("paginationLinks");
 
-// Fungsi untuk memuat data
-function loadData(page = 1) {
+  keywordInput.addEventListener("keyup", function () {
+    var keyword = keywordInput.value;
     var xhr = new XMLHttpRequest();
-    var searchQuery = keyword.value;
 
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            container.innerHTML = xhr.responseText;
-        }
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        var response = xhr.responseText.split('<div class="pagination">');
+        container.innerHTML = response[0];
+        paginationLinks.innerHTML = response[1] || "";
+      }
     };
 
-    xhr.open('GET', 'ajax/roti.php?keyword=' + searchQuery + '&page=' + page, true);
+    xhr.open(
+      "GET",
+      "ajax/roti.php?keyword=" + encodeURIComponent(keyword),
+      true
+    );
     xhr.send();
-}
-
-// Event listener untuk live search
-keyword.addEventListener('keyup', function() {
-    loadData();
-});
-
-// Event listener untuk tombol cari (jaga-jaga jika tidak ada JS)
-tombolCari.addEventListener('click', function(event) {
-    event.preventDefault();
-    loadData();
-});
-
-// Event listener untuk pagination link
-document.addEventListener('click', function(event) {
-    if (event.target.classList.contains('page-link')) {
-        event.preventDefault();
-        var page = event.target.getAttribute('data-page');
-        loadData(page);
-    }
+  });
 });
