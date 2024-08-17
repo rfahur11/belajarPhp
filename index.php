@@ -2,7 +2,7 @@
 require 'function.php';
 
 // Cek apakah user sudah login atau belum
-session_start();
+
 if (!isset($_SESSION["login"])) {
     header("Location: login.php");
     exit;
@@ -53,10 +53,22 @@ $roti = query($query);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Roti</title>
-    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Gaya loader bisa disertakan di sini atau di file style.css */
+        .loader {
+            width: 100px;
+            position: absolute;
+            top: 118px;
+            left: 210px;
+            z-index: -1;
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>Daftar Roti</h1>
+    <div class="index-container">
+    <h1 class="indexRoti">Daftar Roti</h1>
 
     <a href="logout.php">Logout</a> <br>
     <a href="create.php">Tambah Data</a> <br>
@@ -65,6 +77,7 @@ $roti = query($query);
     <form action="" method="get">
         <input type="text" name="keyword" id="keyword" size="40" autofocus placeholder="Masukkan keyword pencarian..." autocomplete="off" value="<?= htmlspecialchars($keyword); ?>">
         <button type="submit" id="tombol-cari">Cari!</button>
+        <img src="img/loader.gif" class="loader">
     </form>
     <br>
 
@@ -97,6 +110,7 @@ $roti = query($query);
             <?php endforeach; ?>
         </table>
     </div>
+    
 
     <!-- Navigasi Pagination -->
     <div id="paginationLinks">
@@ -116,7 +130,10 @@ $roti = query($query);
             <a href="?halaman=<?= $halamanAktif + 1; ?>&keyword=<?= htmlspecialchars($keyword); ?>">&raquo;</a>
         <?php endif; ?>
     </div>
+    </div>
 
+    <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/script.js" defer></script>
 </body>
 </html>
+

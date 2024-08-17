@@ -52,31 +52,38 @@ if (isset($_POST['login'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login - Roti</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Halaman Login</h1>
+    <div class="login-container">
+        <h1>Halaman Login</h1>
 
-    <form action="" method="post">
-        <ul>
-            <li>
-                <label for="username">Username: </label>
-                <input type="text" name="username" id="username" required>
-            </li>
-            <li>
-                <label for="password">Password: </label>
-                <input type="password" name="password" id="password" required>
-            </li>
-            <li>
-                <input type="checkbox" name="remember" id="remember">
-                <label for="remember">Remember me</label>
-            </li>
-            <li>
-                <button type="submit" name="login">Login</button>
-            </li>
-        </ul>
-    </form>
+        <!-- Tambahkan logo roti di bawah H1 -->
+        <img src="img/logo-roti.png" alt="Logo Roti" class="logo-roti">
 
-    <p>Belum punya akun? <a href="register.php">Daftar disini</a></p>
+        <form action="" method="post">
+            <ul>
+                <li>
+                    <label for="username">Username: </label>
+                    <input type="text" name="username" id="username" required>
+                </li>
+                <li>
+                    <label for="password">Password: </label>
+                    <input type="password" name="password" id="password" required>
+                </li>
+                <li>
+                    <input type="checkbox" name="remember" id="remember">
+                    <label for="remember">Remember me</label>
+                </li>
+                <li>
+                    <button type="submit" name="login">Login</button>
+                </li>
+            </ul>
+        </form>
+
+        <p class="register-link">Belum punya akun? <a href="register.php">Daftar disini</a></p>
+    </div>
 </body>
 </html>
+

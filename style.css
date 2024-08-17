@@ -1,0 +1,156 @@
+/* Mengatur gaya dasar untuk seluruh halaman */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f5e1d1; /* Warna latar seperti warna roti */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Mengatur container login */
+.login-container {
+  background-color: #fff7e6; /* Warna latar seperti kulit roti */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+/* Mengatur container registrasi */
+.register-container {
+  background-color: #fff7e6; /* Warna latar seperti kulit roti */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: left;
+}
+
+/* Gaya untuk tabel */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table,
+th,
+td {
+  border: 1px solid #d2b48c;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #d2691e;
+  color: white;
+}
+
+td {
+  background-color: #fff7e6;
+}
+
+/* Gaya untuk pagination */
+#paginationLinks {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#paginationLinks a {
+  color: #d2691e;
+  margin: 0 5px;
+  text-decoration: none;
+}
+
+#paginationLinks a:hover {
+  text-decoration: underline;
+}
+
+/* Mengatur judul */
+h1 {
+  color: #d2691e; /* Warna coklat seperti roti */
+  margin-bottom: 10px;
+}
+
+.indexRoti {
+  text-align: center;
+}
+
+/* Mengatur logo roti */
+.logo-roti {
+  width: 100px;
+
+  margin-bottom: 20px;
+}
+
+/* Mengatur tampilan form */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+/* Mengatur input */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #d2b48c; /* Warna seperti tepung */
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Mengatur checkbox */
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Mengatur tombol login */
+button {
+  background-color: #d2691e; /* Warna coklat seperti roti */
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+/* Mengatur link registrasi */
+.register-link {
+  margin-top: 15px;
+}
+
+a {
+  color: #d2691e;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Gaya untuk pratinjau gambar */
+img.preview {
+  display: block;
+  max-width: 200px;
+  max-height: 200px;
+  margin: 20px auto;
+  border: 2px solid #d2b48c;
+  border-radius: 10px;
+}

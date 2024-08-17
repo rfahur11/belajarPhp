@@ -32,6 +32,7 @@ if (isset($_POST["submit"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ubah Data Roti</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         img.preview {
             max-width: 200px;
@@ -54,6 +55,7 @@ if (isset($_POST["submit"])) {
     </script>
 </head>
 <body>
+    <div class="update-container">
     <h1>Ubah Data Roti</h1>
 
     <form action="" method="post" enctype="multipart/form-data">
@@ -88,5 +90,6 @@ if (isset($_POST["submit"])) {
             </li>
         </ul>
     </form>
+    </div>
 </body>
 </html>

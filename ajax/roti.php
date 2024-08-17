@@ -61,14 +61,14 @@ if (mysqli_num_rows($result) > 0) {
     // Tampilkan pagination
     echo '<div class="pagination">';
     if ($halaman > 1) {
-        echo '<a href="#" data-page="' . ($halaman - 1) . '">&laquo; Prev</a>';
+        echo '<a href="" data-page="' . ($halaman - 1) . '">&laquo; Prev</a>';
     }
     for ($i = 1; $i <= $jumlahHalaman; $i++) {
         $activeClass = ($i == $halaman) ? 'style="font-weight: bold; color: red;"' : '';
-        echo '<a href="#" data-page="' . $i . '" ' . $activeClass . '>' . $i . '</a> ';
+        echo '<a href="" data-page="' . $i . '" ' . $activeClass . '>' . $i . '</a> ';
     }
     if ($halaman < $jumlahHalaman) {
-        echo '<a href="#" data-page="' . ($halaman + 1) . '">Next &raquo;</a>';
+        echo '<a href="" data-page="' . ($halaman + 1) . '">Next &raquo;</a>';
     }
     echo '</div>';
 } else {

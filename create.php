@@ -29,11 +29,14 @@ if( isset($_POST["submit"]) ) {
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Tambah Data Roti</title>
+	<link rel="stylesheet" href="style.css">
 	<style>
 		img.preview {
 			max-width: 200px;
 			max-height: 200px;
 			margin-top: 10px;
+			border: 2px solid #d2b48c;
+			border-radius: 10px;
 		}
 	</style>
 	<script>
@@ -51,8 +54,9 @@ if( isset($_POST["submit"]) ) {
 	</script>
 </head>
 <body>
+<div class="create-container">
 	<h1>Tambah Data Roti</h1>
-
+	
 	<form action="" method="post" enctype="multipart/form-data">
 		<ul>
 			<li>
@@ -82,6 +86,8 @@ if( isset($_POST["submit"]) ) {
 			</li>
 		</ul>
 	</form>
+	</div>
 
 </body>
 </html>
+
