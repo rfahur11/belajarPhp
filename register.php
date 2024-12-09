@@ -33,34 +33,38 @@ if (isset($_POST['register'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Halaman Registrasi</h1>
+    <div class="register-container">
+        <h1>Halaman Registrasi</h1>
 
-    <form action="" method="post">
-        <ul>
-            <li>
-                <label for="email">Email: </label>
-                <input type="email" name="email" id="email" required>
-            </li>
-            <li>
-                <label for="username">Username: </label>
-                <input type="text" name="username" id="username" required>
-            </li>
-            <li>
-                <label for="password">Password: </label>
-                <input type="password" name="password" id="password" required>
-            </li>
-            <li>
-                <label for="password2">Konfirmasi Password: </label>
-                <input type="password" name="password2" id="password2" required>
-            </li>
-            <li>
-                <button type="submit" name="register">Register</button>
-            </li>
-        </ul>
-    </form>
+        <form action="" method="post">
+            <ul>
+                <li>
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" required>
+                </li>
+                <li>
+                    <label for="username">Username: </label>
+                    <input type="text" name="username" id="username" required>
+                </li>
+                <li>
+                    <label for="password">Password: </label>
+                    <input type="password" name="password" id="password" required>
+                </li>
+                <li>
+                    <label for="password2">Konfirmasi Password: </label>
+                    <input type="password" name="password2" id="password2" required>
+                </li>
+                <li>
+                    <button type="submit" name="register">Register</button>
+                </li>
+            </ul>
+        </form>
 
-    <p>Sudah punya akun? <a href="login.php">Login disini</a></p>
+        <p class="login-link">Sudah punya akun? <a href="login.php">Login disini</a></p>
+    </div>
 </body>
 </html>
+
